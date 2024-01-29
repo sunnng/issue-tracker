@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AiOutlineBug } from "react-icons/ai";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const currentPath = usePathname();
@@ -24,7 +24,7 @@ const Navbar = () => {
           <li key={link.href}>
             <Link
               href={link.href}
-              className={clsx(" hover:text-zinc-800 transition-colors", {
+              className={cn(" hover:text-zinc-800 transition-colors", {
                 "text-zinc-900": link.href === currentPath,
                 "text-zinc-500": link.href !== currentPath,
               })}
