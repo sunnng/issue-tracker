@@ -13,6 +13,7 @@ const Navbar = () => {
     { label: "Dashboard", href: "/" },
     { label: "Issue", href: "/issues" },
   ];
+
   return (
     <nav className="flex items-center space-x-6 h-14 border-b mb-5 px-5">
       <Link href={"/"}>
