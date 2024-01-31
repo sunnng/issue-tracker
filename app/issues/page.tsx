@@ -1,17 +1,12 @@
-"use client";
-
 import React from "react";
-import { Button, TextField, TextArea } from "@radix-ui/themes";
+import { Button } from "@radix-ui/themes";
+import Link from "next/link";
 
 const IssuesPage = () => {
   return (
-    <div className="flex justify-center flex-col space-y-3 max-w-xl m-auto">
-      <TextField.Root>
-        <TextField.Input placeholder="Title" />
-      </TextField.Root>
-      <TextArea placeholder="Description…" />
-      <Button>Submit New Issue</Button>
-    </div>
+    <Button>
+      <Link href="/issues/new">Create Issue</Link>
+    </Button>
   );
 };
 
